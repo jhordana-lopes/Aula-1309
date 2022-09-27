@@ -9,7 +9,7 @@
 	rel="stylesheet"
 	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 	crossorigin="anonymous">
-	<link rel="styLesheet" href="css/style.css">
+<link rel="styLesheet" href="css/style.css">
 </head>
 <body>
 	<h1>Listagem de Livros</h1>
@@ -23,11 +23,18 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr data-th-each="lvr : ${livros}">
-				<td data-th-text="${lvr.id}"></td>
-				<td data-th-text="${lvr.isbn}"></td>
-				<td data-th-text= "${lvr.nome}"></td>
-				<td data-th-text= "${lvr.autor}"></td>
+			<!-- 			<tr data-th-each="lvr : ${livros}"> -->
+			<!-- 				<td data-th-text="${lvr.id}"></td> -->
+			<!-- 				<td data-th-text="${lvr.isbn}"></td> -->
+			<!-- 				<td data-th-text= "${lvr.nome}"></td> -->
+			<!-- 				<td data-th-text= "${lvr.autor}"></td> -->
+			<!-- 			</tr> -->
+
+			<tr th:each="livro : ${livros}">
+				<td th:text="${livro.id}"></td>
+				<td th:text="${livro.isbn}"></td>
+				<td th:text="${livro.nome}"></td>
+				<td th:text="${livro.autor}"></td>
 			</tr>
 		</tbody>
 	</table>

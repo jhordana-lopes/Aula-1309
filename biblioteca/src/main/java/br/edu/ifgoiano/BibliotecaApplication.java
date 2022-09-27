@@ -32,7 +32,13 @@ public class BibliotecaApplication implements CommandLineRunner {
 		livro2.setAutor("Anna");
 		livro2.setIsbn("123456");
 		
+		Livro livro3 = new Livro();
+		livro3.setNome("Java iniciante 2.0");
+		livro3.setAutor("Jhordana");
+		livro3.setIsbn("124456");
+		
 		livroRepository.save(livro1);
 		livroRepository.save(livro2);
+		livroRepository.save(livro3);
 	}
 } 
