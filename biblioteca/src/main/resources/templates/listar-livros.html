@@ -32,6 +32,7 @@
 					<th scope="col">ISBN</th>
 					<th scope="col">Nome</th>
 					<th scope="col">Autor</th>
+					<th scope="col"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -40,6 +41,10 @@
 					<td th:text="${livro.isbn}"></td>
 					<td th:text="${livro.nome}"></td>
 					<td th:text="${livro.autor}"></td>
+					<td>
+					<a class="btn btn-success"th:href="@{/livros/alterar/{id}(id=${livro.id})}"> Alterar</a>
+					<a class="btn btn-danger">Excluir</a>
+					</td>
 				</tr>
 			</tbody>
 		</table>
